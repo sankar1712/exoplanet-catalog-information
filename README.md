@@ -18,6 +18,7 @@ Runtime environment : NodeJS(Version 14)
 
 Pre-requisites: 
 1] Please ensure the latest stable Nodejs version is installed in the system before executing the program.
+
 2] Please ensure the directory where the NodeJs & npm package is to be installed, has read and write access.
 
 Navigate to the project root directory and execute the `start script` defined in `package.json` file by using below command
@@ -147,5 +148,7 @@ docker build . -t  exoplanet-catalog-information
 
 # Project file content
 [1] package.json - contains the project information and it is the starting point for meta data.
+
 [2] test > helper.js - contains the relevant helper packages and setup required for executing Mocha unit tests.
+
 [3] .mocharc.js and test > mocha.opts - contains Mocha configuration file and the arguments required for mocha setup.
