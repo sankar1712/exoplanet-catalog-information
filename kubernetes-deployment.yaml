@@ -2,8 +2,8 @@ apiVersion: v1.0
 kind: Deployment
 metadata:
   labels:
-    app: exoplanet-catalogue
-    name: exercise-exoplanet-catalogue
+    app: exoplanet-catalogue-information
+    name: exoplanet-catalogue-information
   spec:
     replicas: 2
     strategy:
@@ -11,15 +11,15 @@ metadata:
     template:
       metadata:
         labels:
-          app: exoplanet-catalogue
+          app: exoplanet-catalogue-information
           tier: backend
       spec:
         containers:
           - env:
             - name: LOG_LEVEL
               value: info
-          image: /exercise-exoplanet-catalogue:7fgae7d
-          name: exercise-exoplanet-catalogue
+          image: /exoplanet-catalogue-information:c0ee5af
+          name: exoplanet-catalogue-information
           ports:
           - containerPort: 3000
             protocol: TCP

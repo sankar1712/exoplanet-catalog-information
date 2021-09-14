@@ -1,7 +1,7 @@
 # docker.yaml
 
 # Set the node version that needs to be installed
-ARG NODE_VERSION=11
+ARG NODE_VERSION=14
 
 ###
 # Declare the external dependencies.

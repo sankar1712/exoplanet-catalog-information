@@ -19,10 +19,10 @@ const dataSet = 'https://gist.githubusercontent.com/joelbirchler/66cf8045fcbb651
 async function getDataSet(dataurl) {
 	if (dataurl) {
 		return new Promise((resolve, reject) => {
-			request({ dataurl, json: true }, (err, response, body) => { // pass the dataurl and set json flag as true, and get the required data
+			request({ url:dataurl, json: true }, (err, res, data) => { // pass the dataurl and set json flag as true, and get the required data
 				if (err) return reject(err); // reject the promise, if error found
 
-				return resolve({ response, body }); // resolve the promise, if response and body were found
+				return resolve({ res, data }); // resolve the promise, if response and body were found
 			})
 		});
 	}
@@ -36,7 +36,7 @@ async function getDataSet(dataurl) {
  * exoPlanetDataSet : array of exoPlanet objects.
  * displays and returns the number of orphan planets(no star).
  */
-async function displayOrphanPlanets(exoPlanetDataSet) {
+function displayOrphanPlanets(exoPlanetDataSet) {
 	let orphan_planet_count = 0; // Initialize the variable to store the orphan planet count
 	if (exoPlanetDataSet && exoPlanetDataSet.length > 0) {
 		Object.keys(exoPlanetDataSet).forEach(key => { //Iterate the array of exoPlanetDataSet objects
@@ -56,7 +56,7 @@ async function displayOrphanPlanets(exoPlanetDataSet) {
  * exoPlanetDataSet : array of exoPlanet objects.
  * displays and returns the name(planet identifier) of the planet orbiting the hottest star.
  */
-async function displayHottestStar(exoPlanetDataSet) {
+function displayHottestStar(exoPlanetDataSet) {
 	if (exoPlanetDataSet && exoPlanetDataSet.length > 0) {
 		// Iterate the array of exoPlanetDataSet objects to get the maximum value of HostStarTempK
 		var maximumTempK = Math.max.apply(null, Object.keys(exoPlanetDataSet).map(function (x) { return exoPlanetDataSet[x].HostStarTempK }));
@@ -124,7 +124,7 @@ Initialize();
 
 // export the created functions
 module.exports = {
-	app: main,
+	app: Initialize,
 	getDataSet: getDataSet,
 	displayOrphanPlanets: displayOrphanPlanets,
 	displayHottestStar: displayHottestStar,
