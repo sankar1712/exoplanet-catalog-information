@@ -42,7 +42,9 @@ Also, this step will run automatically, if we run the start test script and we d
 C:\Users\sankarasubramanian\Downloads\exercise-exoplanet-catalogue-master\exoplanet-catalogue-information>npm run start
 
 JSON formatted exoplanet dataset received successfully
+
 The number of orphan planets (no star):  2
+
 The name (planet identifier) of the planet orbiting the hottest star:  V391 Peg b
 
 ****************************TimeLine Information grouped by planet size****************************
