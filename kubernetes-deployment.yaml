@@ -18,7 +18,7 @@ metadata:
           - env:
             - name: LOG_LEVEL
               value: info
-          image: /exoplanet-catalogue-information:c0ee5af
+          image: /exoplanet-catalogue-information:18b79ec
           name: exoplanet-catalogue-information
           ports:
           - containerPort: 3000
