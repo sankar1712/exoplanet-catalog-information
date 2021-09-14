@@ -149,24 +149,24 @@ describe('app unit tests:', function () {
 
     it('for EMPTY RadiusJpt or DiscoveryYear - should not increment planet count in response data - ', async () => {
       let expectedResponse = [
-        2010, 1, 0, 0,
+        2010, 3, 0, 0,
         2012, 1, 0, 0,
-        2018, 0, 0, 0
+        2014, 0, 0, 0
       ];
       const result = await app.displayPlanetDiscoveryTimeline(sampleTestData);
-      console.log('result')
-      expect(result).to.not.contain(expectedResponse); // for 2018 the count is 0
+      expect(result).to.not.contain(expectedResponse); // for 2014 the count is 0
     });
 
     it('for valid data set - should return TWO matching stars response', async () => {
       let expectedResponse = [
-        2010, 1, 0, 0,
+        2009, 0, 0, 0,
+        2010, 3, 0, 0,
         2012, 1, 0, 0,
-        2018, 0, 0, 0
+        2014, 0, 0, 0,
+        2016, 1, 1, 0
       ];
       var result = [];
       result = await app.displayPlanetDiscoveryTimeline(sampleTestData);
-      console.log('result')
       expect(result).to.deep.equal(expectedResponse);
     });
   });
