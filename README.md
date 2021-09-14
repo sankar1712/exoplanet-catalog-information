@@ -108,40 +108,43 @@ In 2016 we discovered 1267 small planets, 26 medium planets and 0 large planets
 ********************************************************
 
 ## Test Output
-  application unit tests:
-    √ modules should be declared
-    fetch data set scenarios
-      √ should return response - for EMPTY url
-      √ should return response - for valid url
-    no star scenarios
-      √ should return ZERO matching stars response - for empty data set
+application unit tests:
+
+√ modules should be declared
+
+fetch data set scenarios
+√ should return response - for EMPTY url
+√ should return response - for valid url
+
+no star scenarios
+√ should return ZERO matching stars response - for empty data set
+
 The number of orphan planets (no star):  0
-      √ should return ZERO matching stars response - for valid data set with 0 TypeFlag=3
+√ should return ZERO matching stars response - for valid data set with 0 TypeFlag=3
+
 The number of orphan planets (no star):  2
-      √ should return TWO matching stars response - for valid data set
-    hottest star scenarios
-      √ should return empty PlanetIdentifier name - for empty data set
+√ should return TWO matching stars response - for valid data set
+
+hottest star scenarios
+
+√ should return empty PlanetIdentifier name - for empty data set
+
 The name (planet identifier) of the planet orbiting the hottest star:  Kepler-63 b
-      √ should return FIRST matching PlanetIdentifier name - for valid data set with mutiple stars having same value for HostStarTempK     
+√ should return FIRST matching PlanetIdentifier name - for valid data set with mutiple stars having same value for HostStarTempK     
+
 The name (planet identifier) of the planet orbiting the hottest star:  Kepler-9 b
-      √ should return matching PlanetIdentifier name - for valid data set
-    timeline data scenarios
-      √ should return empty response data - for empty data set
---------------------------TIMELINE Data--------------------------
-In 2010 we discovered 1 small planets, 0 medium planets and 0 large planets
-In 2012 we discovered 1 small planets, 0 medium planets and 0 large planets
-In 2018 we discovered 0 small planets, 0 medium planets and 0 large planets
------------------------------------------------------------------
-      √ should not increment planet count in response data - for EMPTY RadiusJpt or DiscoveryYear
---------------------------TIMELINE Data--------------------------
-In 2010 we discovered 1 small planets, 0 medium planets and 0 large planets
-In 2012 we discovered 1 small planets, 0 medium planets and 0 large planets
-In 2018 we discovered 0 small planets, 0 medium planets and 0 large planets
------------------------------------------------------------------
-      √ should return TWO matching stars response - for valid data set
+√ should return matching PlanetIdentifier name - for valid data set
+
+timeline data scenarios
+
+√ should return empty response data - for empty data set
+
+√ should not increment planet count in response data - for EMPTY RadiusJpt or DiscoveryYear
+
+√ should return TWO matching stars response - for valid data set
 
 
-  12 passing (101ms)
+12 passing (101ms)
 
 # docker build command
 docker build . -t  exoplanet-catalog-information

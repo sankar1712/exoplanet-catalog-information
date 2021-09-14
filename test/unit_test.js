@@ -154,7 +154,6 @@ describe('app unit tests:', function () {
         2014, 0, 0, 0
       ];
       const result = await app.displayPlanetDiscoveryTimeline(sampleTestData);
-      console.log('result')
       expect(result).to.not.contain(expectedResponse); // for 2014 the count is 0
     });
 
@@ -168,7 +167,6 @@ describe('app unit tests:', function () {
       ];
       var result = [];
       result = await app.displayPlanetDiscoveryTimeline(sampleTestData);
-      console.log('result')
       expect(result).to.deep.equal(expectedResponse);
     });
   });
