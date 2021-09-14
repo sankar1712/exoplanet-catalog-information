@@ -28,7 +28,7 @@ Note : pre-start step has been included to install the required project dependen
 This will install the necessary packages under .node_modules directory.
 Also, this step will run automatically, if we run the start script and we don't need to run it manually.
 
-## Procedure for execution of tests.
+## Procedure for execution of tests
 Navigate to the project root directory and execute the `test script` defined in `package.json` file by using below command
 
 `npm run test`
